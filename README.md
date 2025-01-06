@@ -4,6 +4,8 @@ Welcome to the repository for my personal portfolio website! 🎉 This project i
 
 This project is **inspired** by the amazing work of [Naresh Khatri](https://github.com/Naresh-Khatri/Portfolio). His innovative approach to web design and attention to detail has been a huge influence. Thank you, Naresh! 🙏
 
+## Live preview: https://www.abhijitzende.com/
+
 ## 🔥 Features
 
 Here are the key highlights of my portfolio:
@@ -54,23 +56,44 @@ The portfolio website is built using the following tools and technologies:
    npm install
    ```
 
-4. Start the development server:
+4. Set up environment variables:
+   ```bash
+   # Create a .env.local file in the root directory
+   touch .env.local
+
+   # Add your Resend API key
+   RESEND_API_KEY=your_resend_api_key_here
+   ```
+
+5. Start the development server:
    ```bash
    npm run dev
    ```
 
-5. Open your browser and navigate to:
+6. Open your browser and navigate to:
    ```
    http://localhost:3000
    ```
 
-## 💖 Acknowledgments
-
-A huge shoutout to [Naresh Khatri](https://github.com/Naresh-Khatri/Portfolio) for the inspiration and ideas that sparked this journey! 💡 If you're interested in creative web design, definitely check out his work.
-
 ## 🚀 Deployment
 
 This project is deployed using **Vercel** for its blazing-fast performance and ease of use. You can view the live site [here](https://www.abhijitzende.com/).
+
+### Setting up Resend API on Vercel
+
+1. Sign up for a [Resend](https://resend.com) account and get your API key
+2. Go to your Vercel project settings
+3. Navigate to the "Environment Variables" section
+4. Add a new environment variable:
+   - Name: `RESEND_API_KEY`
+   - Value: Your Resend API key
+5. Save the changes and redeploy your application
+
+Note: Make sure to keep your API key secret and never commit it to your repository.
+
+## 💖 Acknowledgments
+
+A huge shoutout to [Naresh Khatri](https://github.com/Naresh-Khatri/Portfolio) for the inspiration and ideas that sparked this journey! 💡 If you're interested in creative web design, definitely check out his work.
 
 ## 📬 Contact
 
@@ -81,4 +104,4 @@ Feel free to reach out to me for collaboration, feedback, or just to say hi! �
 
 ---
 
-⭐ If you like this project, don’t forget to give it a star!
+⭐ If you like this project, don't forget to give it a star!

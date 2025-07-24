@@ -1,8 +1,12 @@
+![Portfolio Preview](https://github.com/Abhiz2411/3D-interactive-portfolio/blob/main/public/assets/seo/og-image.png?raw=true)
+
 # 🚀 My Portfolio Website
 
 Welcome to the repository for my personal portfolio website! 🎉 This project is a culmination of creativity, technology, and my dedication to showcasing my skills, projects, and personality in a visually stunning and interactive manner.
 
 ### Live preview: https://www.abhijitzende.com/
+
+![Preview](https://github.com/Abhiz2411/3D-interactive-portfolio/blob/main/public/assets/preview.gif?raw=true)
 
 https://github.com/Abhiz2411/3D-interactive-portfolio/blob/main/preview_video.mp4
 

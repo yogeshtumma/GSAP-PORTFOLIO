@@ -6,7 +6,7 @@ Welcome to the repository for my personal portfolio website! 🎉 This project i
 
 ### Live preview: https://www.abhijitzende.com/
 
-![Preview](https://github.com/Abhiz2411/3D-interactive-portfolio/blob/main/public/assets/preview.gif?raw=true)
+![Preview](https://github.com/Abhiz2411/3D-interactive-portfolio/blob/main/public/assets/preview_video.gif?raw=true)
 
 https://github.com/Abhiz2411/3D-interactive-portfolio/blob/main/preview_video.mp4
 

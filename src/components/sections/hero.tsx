@@ -76,7 +76,7 @@ const HeroSection = () => {
                       "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
                     )}
                   >
-                    DevOps Enthusiast
+                    AI Enthusiast
                   </p>
                 </BlurIn>
               </div>

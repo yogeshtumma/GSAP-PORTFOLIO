@@ -842,7 +842,7 @@ const projects: Project[] = [
         <div>
           <TypographyP className="font-mono ">
             💯The most comprehensive and interactive platform to learn Data
-            Structures & Algorithms📊. Join thousands of developers who've
+            Structures & Algorithms📊. Join thousands of developers who&apos;ve
             transformed their coding skills.⚡
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
@@ -884,7 +884,7 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            Welcome to my digital playground, where creativity meets code in the
+            ⛳Welcome to my digital playground, where creativity meets code in the
             dopest way possible.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />

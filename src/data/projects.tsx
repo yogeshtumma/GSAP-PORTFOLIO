@@ -2,7 +2,13 @@ import AceTernityLogo from "@/components/logos/aceternity";
 import SlideShow from "@/components/slide-show";
 import { Button } from "@/components/ui/button";
 import { TypographyH3, TypographyP } from "@/components/ui/typography";
-import { ArrowDownUpIcon, ArrowUpRight, ExternalLink, Link2, MoveUpRight } from "lucide-react";
+import {
+  ArrowDownUpIcon,
+  ArrowUpRight,
+  ExternalLink,
+  Link2,
+  MoveUpRight,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -242,55 +248,55 @@ const PROJECT_SKILLS = {
     title: "OpenAI",
     bg: "black",
     fg: "white",
-    icon: <img src="assets/icons/openai-svgrepo-com_white.svg" alt="OpenAI"/>,
+    icon: <img src="assets/icons/openai-svgrepo-com_white.svg" alt="OpenAI" />,
   },
   netlify: {
     title: "Netlify",
     bg: "black",
     fg: "white",
-    icon: <SiNetlify/>,
+    icon: <SiNetlify />,
   },
   html: {
     title: "HTML5",
     bg: "black",
     fg: "white",
-    icon: <SiHtml5/>,
+    icon: <SiHtml5 />,
   },
   css: {
     title: "CSS3",
     bg: "black",
     fg: "white",
-    icon: <SiCss3/>,
+    icon: <SiCss3 />,
   },
   bootstrap: {
     title: "Bootstrap",
     bg: "black",
     fg: "white",
-    icon: <SiBootstrap/>,
+    icon: <SiBootstrap />,
   },
   maven: {
     title: "Maven",
     bg: "black",
     fg: "white",
-    icon: <SiApachemaven/>,
+    icon: <SiApachemaven />,
   },
   java: {
     title: "Java",
     bg: "black",
     fg: "white",
-    icon: <img src="assets/icons/icons8-java.svg" alt="Java"/>,
+    icon: <img src="assets/icons/icons8-java.svg" alt="Java" />,
   },
   cplusplus: {
     title: "C++",
     bg: "black",
     fg: "white",
-    icon: <SiCplusplus/>,
+    icon: <SiCplusplus />,
   },
   arduino: {
     title: "Arduino",
     bg: "black",
     fg: "white",
-    icon: <SiArduino/>,
+    icon: <SiArduino />,
   },
 };
 export type Project = {
@@ -769,128 +775,99 @@ const projects: Project[] = [
   // },
 
   // +
-  { // 01. AI Docker file optimizer project
+  {
+    // 01. AI Docker file optimizer project
     id: "aidockerfileoptimizer",
     category: "3D Portfolio",
     title: "Space Portfolio",
-    src: "/assets/projects-screenshots/aidockerfileoptimizer/2.png",
-    screenshots: ["1.png", "2.png", "3.png"],
+    src: "/assets/projects-screenshots/aidockerfileoptimizer/1.jpg",
+    screenshots: ["1.jpg", "2.jpg", "3.jpg"],
     live: "https://yogeshop.vercel.app/",
-    github:"https://github.com/visYogesh/Portfolio-op",
+    github: "https://github.com/visYogesh/Portfolio-op",
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind],
-      backend: [PROJECT_SKILLS.openai,PROJECT_SKILLS.netlify],
+      frontend: [
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+      ],
+      backend: [PROJECT_SKILLS.openai, PROJECT_SKILLS.netlify],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            Exploring the infinite possibilities of design and code beyond Earth, 🌌 blending creativity and technology to craft stellar digital experiences, 🛰️ a journey through innovation orbiting around imagination.
+            Exploring the infinite possibilities of design and code beyond
+            Earth, 🌌 blending creativity and technology to craft stellar
+            digital experiences, 🛰️ a journey through innovation orbiting around
+            imagination.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
             images={[
-              `${BASE_PATH}/aidockerfileoptimizer/1.png`,
-              `${BASE_PATH}/aidockerfileoptimizer/2.png`,
-              `${BASE_PATH}/aidockerfileoptimizer/3.png`,
+              `${BASE_PATH}/aidockerfileoptimizer/1.jpg`,
+              `${BASE_PATH}/aidockerfileoptimizer/2.jpg`,
+              `${BASE_PATH}/aidockerfileoptimizer/3.jpg`,
             ]}
           />
         </div>
       );
     },
   },
-  { // 02. FinanceMe project
-    id: "financeme",
-    category: "react and vite",
-    title: "Aroma Alike🍂",
-    src: "/assets/projects-screenshots/financeme/1.png",
-    screenshots: ["/assets/projects-screenshots/financeme/1.png"],
+  {
+    // 05. Smart Job Tracker project
+    id: "smartjobtracker",
+    category: "Next js, Next Auth",
+    title: "DS-ALGO",
+    src: "/assets/projects-screenshots/smartjobtracker/2.jpg",
+    screenshots: ["1.jpg", "2.jpg", "3.jpg", "4.jpg"],
+    live: "https://dsalgo.fun/",
+    github: "https://github.com/visYogesh",
     skills: {
       frontend: [
         PROJECT_SKILLS.react,
-        PROJECT_SKILLS.vite,
+        PROJECT_SKILLS.next,
         PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.framerMotion,
       ],
       backend: [
-        PROJECT_SKILLS.openai,
-        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.firebase,
+        PROJECT_SKILLS.supabase,
+        PROJECT_SKILLS.postgres,
+        PROJECT_SKILLS.mongo,
       ],
     },
-    live: "https://aromaalike.vercel.app/",
-    github: "https://github.com/visYogesh/aromaalike",
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            Aroma Alike🍂, find fragrances that match your favorites perfumes and explore the new aromas effortlessly! 🔥🍾
+            💯The most comprehensive and interactive platform to learn Data
+            Structures & Algorithms📊. Join thousands of developers who've
+            transformed their coding skills.⚡
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Architecture </TypographyH3>
-          <p className="font-mono mb-2">
-            The project is divided into three main phases:
-            1.Automating Infrastructure Provisioning
-            2.Build and Deployment Automation
-            3.Continuous Monitoring
-          </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/financeme/1.png`,
-              `${BASE_PATH}/financeme/2.png`,
+              `${BASE_PATH}/smartjobtracker/1.jpg`,
+              `${BASE_PATH}/smartjobtracker/2.jpg`,
+              `${BASE_PATH}/smartjobtracker/3.jpg`,
+              `${BASE_PATH}/smartjobtracker/4.jpg`,
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">Automating Infrastructure Provisioning</TypographyH3>
-          <p className="font-mono mb-2">
-          Terraform is used to create 4 AWS EC2 instances:
-            Jenkins Master Node (for CI/CD pipeline management)
-            Build Server (for application and Docker image builds)
-            Production Server (for deploying Dockerized applications)
-            Monitoring Server (for continuous monitoring of Build and Prod servers)
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/4_A.png`,
-              `${BASE_PATH}/financeme/4.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Build and Deployment Automation</TypographyH3>
-
-          <p className="font-mono mb-2">
-          Jenkins is configured for a CI/CD pipeline:
-            Jenkins Master Node is responsible for pipeline orchestration.
-            Build Server is configured as a Jenkins Slave Node to handle application builds and Docker image creation.
-            Ansible is used for automating deployment to the Prod server, where the application is deployed using an Ansible client-server model.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/5.png`,
-              `${BASE_PATH}/financeme/6.png`,
-              `${BASE_PATH}/financeme/7.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Continuous Monitoring </TypographyH3>
-          <p className="font-mono mb-2">
-          Prometheus and Grafana are used for real-time monitoring:
-            Node Exporter is installed on both Build and Prod servers to collect server metrics (CPU, Disk Space, Memory Utilization).
-            Grafana Dashboard is created to visualize these metrics for continuous monitoring.
-          </p>
-          <SlideShow images={[
-                `${BASE_PATH}/financeme/3.png`,
-                `${BASE_PATH}/financeme/8.png`,
-                `${BASE_PATH}/financeme/9.png`,
-                `${BASE_PATH}/financeme/10.png`,
-            ]} />
         </div>
       );
     },
   },
-  { // 03. Portfolio project
+
+  {
+    // 03. Portfolio project
     id: "portfolio",
     category: "Portfolio",
     title: "My Portfolio",
-    src: "/assets/projects-screenshots/myportfolio/landing.png",
-    screenshots: ["assets/projects-screenshots/myportfolio/landing.png"],
+    src: "/assets/projects-screenshots/myportfolio/1.jpg",
+    screenshots: ["1.jpg", "2.jpg", "3.jpg"],
     live: "https://www.abhijitzende.com/",
-    github:"https://github.com/Abhiz2411/3D-interactive-portfolio",
+    github: "https://github.com/Abhiz2411/3D-interactive-portfolio",
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
@@ -915,19 +892,19 @@ const projects: Project[] = [
             Beautiful 3D Objects{" "}
           </TypographyH3>
           <p className="font-mono mb-2">
-            Did you see that 3D keyboard modal? Yeah! I made that. That
+            🪂Did you see that 3D keyboard modal? Yeah! I made that. That
             interactive keyboard is being rendered in 3D on a webpage 🤯, and
             pressing each keycap reveals a skill in a goofy way. It&apos;s like
             typing, but make it art.
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/myportfolio/landing.png`,
-              `${BASE_PATH}/portfolio/skills.png`,
+              `${BASE_PATH}/myportfolio/1.jpg`,
+              `${BASE_PATH}/myportfolio/2.jpg`,
+              `${BASE_PATH}/myportfolio/3.jpg`,
             ]}
           />
-        
-         
+
           <p className="font-mono mb-2 mt-8 text-center">
             This site&apos;s not just a portfolio — it&apos;s a whole vibe.
           </p>
@@ -935,108 +912,103 @@ const projects: Project[] = [
       );
     },
   },
-  { // 04. Smart parking assitant
+  {
+    // 04. Smart parking assitant
     id: "smartparkingassitant",
-    category: "IoT",
-    title: "Smart Parking Assistant",
-    src: "/assets/projects-screenshots/smartparkingassitant/01.jpeg",
-    screenshots: ["01.jpeg", "03.png"],
-    live: "https://github.com/Abhiz2411/smart-parking-assistant",
-    github:"https://github.com/Abhiz2411/smart-parking-assistant",
+    category: "Chess",
+    title: "Chess.com",
+    src: "/assets/projects-screenshots/smartparkingassitant/4.jpg",
+    screenshots: ["3.jpg","1.jpg", "2.jpg"],
+    live: "https://chess-ui-chi.vercel.app/",
+    github: "https://github.com/visYogesh/ChessFront",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind],
+      backend: [
+        PROJECT_SKILLS.sockerio,
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+      ],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            A two player chess game♟️, users can create/join rooms as black and
+            white pieces🧩. Supports all rules like Castling🐘, Em Pasant🤺 and
+            all. Create play and loose.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/smartparkingassitant/3.jpg`,
+              `${BASE_PATH}/smartparkingassitant/1.jpg`,
+              `${BASE_PATH}/smartparkingassitant/2.jpg`,
+            ]}
+          />
+        </div>
+      );
+    },
+  },
+  {
+    // 02. FinanceMe project
+    id: "financeme",
+    category: "react and vite",
+    title: "Aroma Alike🍂",
+    src: "/assets/projects-screenshots/financeme/1.jpg",
+    screenshots: ["/assets/projects-screenshots/financeme/1.jpg"],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.vite,
+        PROJECT_SKILLS.tailwind,
+      ],
+      backend: [PROJECT_SKILLS.openai, PROJECT_SKILLS.js],
+    },
+    live: "https://aromaalike.vercel.app/",
+    github: "https://github.com/visYogesh/aromaalike",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Aroma Alike🍂, find fragrances that match your favorites perfumes
+            and explore the new aromas effortlessly! 🔥🍾
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+
+          <SlideShow
+            images={[
+              `${BASE_PATH}/financeme/1.jpg`,
+            ]}
+          />
+        </div>
+      );
+    },
+  },
+
+  {
+    // 06. Savinder Puri portfolio project
+    id: "savinderpurisportfolio",
+    category: "god or what",
+    title: "The GOD Ganesha",
+    src: "/assets/projects-screenshots/yogesh/2.jpg",
+    screenshots: ["1.jpg"],
+    live: "https://github.com/visYogesh/Lord-Ganesha",
+    github: "https://github.com/visYogesh/Lord-Ganesha",
     skills: {
       frontend: [PROJECT_SKILLS.python],
-      backend: [PROJECT_SKILLS.cplusplus, PROJECT_SKILLS.arduino],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Transform parking with the Smart Parking Assistant, an IoT marvel powered by Arduino 
-            and IR sensors to detect and recommend the best spots in real-time. Enjoy a sleek GUI 
-            that visualizes availability and an intelligent system for quick, optimal decisions. 
-            Built to adapt with customizable hardware and Python-powered software for seamless 
-            integration. Say goodbye to parking woes and hello to smarter space utilization!
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/smartparkingassitant/01.jpeg`,
-              `${BASE_PATH}/smartparkingassitant/03.png`,
-              `${BASE_PATH}/smartparkingassitant/04.jpg`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  { // 05. Smart Job Tracker project
-    id: "smartjobtracker",
-    category: "Full stack",
-    title: "Smart Job Tracker",
-    src: "/assets/projects-screenshots/smartjobtracker/02.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png","06.png","07.png"],
-    live: "https://job-tracker-application-eight.vercel.app/",
-    github:"https://github.com/Abhiz2411/Job-tracker-application",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [PROJECT_SKILLS.firebase],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Track your job applications effortlessly with a sleek, dark-themed app that lets you 
-            manage, filter, and visualize your job search. Organize your applications with a 
-            Kanban board, monitor progress through status updates, and store everything securely. 
-            Enjoy seamless access across devices with a responsive design and email reminders for 
-            interviews. A smarter, more intuitive way to stay on top of your job hunt!
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/smartjobtracker/01.png`,
-              `${BASE_PATH}/smartjobtracker/02.png`,
-              `${BASE_PATH}/smartjobtracker/03.png`,
-              `${BASE_PATH}/smartjobtracker/04.png`,
-              `${BASE_PATH}/smartjobtracker/05.png`,
-              `${BASE_PATH}/smartjobtracker/06.png`,
-              `${BASE_PATH}/smartjobtracker/07.png`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  { // 06. Savinder Puri portfolio project
-    id: "savinderpurisportfolio",
-    category: "Web Development",
-    title: "Savinder Puri Portfolio",
-    src: "/assets/projects-screenshots/savinderpuriportfolio/01.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png"],
-    live: "https://savinder-puri.vercel.app/",
-    github:"https://github.com/Abhiz2411/savinder-puri",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
       backend: [],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            Step into the digital world of Savinder Puri, the beloved DevOps guru and Spiritual 
-            Alchemist, with this responsive portfolio website. 🌐✨ Explore his inspiring journey, 
-            milestones, and life-changing services blending tech and spirituality. Built with 
-            modern tools like React and TypeScript, it’s a heartfelt tribute to a mentor who 
-            transforms lives. 💻🕊️ Crafted with ❤️ by Abhijit Zende! 🚀
+            My GOATED Favorite God of all time Ganesha💚, I made him with python turtle library🎨🖼️, This was my first project built on threads.🧵💌
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
             images={[
-              `${BASE_PATH}/savinderpuriportfolio/01.png`,
-              `${BASE_PATH}/savinderpuriportfolio/02.png`,
-              `${BASE_PATH}/savinderpuriportfolio/03.png`,
-              `${BASE_PATH}/savinderpuriportfolio/04.png`,
-              `${BASE_PATH}/savinderpuriportfolio/05.png`,
+              `${BASE_PATH}/yogesh/1.jpg`,
+              `${BASE_PATH}/yogesh/2.jpg`,
             ]}
           />
         </div>

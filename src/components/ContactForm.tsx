@@ -9,6 +9,16 @@ import { useToast } from "./ui/use-toast";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 
+import styled from "@emotion/styled";
+
+const GradientSpan = styled.span`
+  background: linear-gradient(to right, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+`;
+
+
 const ContactForm = () => {
   const [fullName, setFullName] = React.useState("");
   const [email, setEmail] = React.useState("");
@@ -111,7 +121,7 @@ const ContactForm = () => {
           onChange={(e) => setMessage(e.target.value)}
         />
         <p className="text-sm text-muted-foreground">
-          I&apos;ll never share your data with anyone else. Pinky promise!
+          I&apos;ll never share your data with anyone else. <GradientSpan >Pinky promise!</GradientSpan>
         </p>
       </div>
       <Button

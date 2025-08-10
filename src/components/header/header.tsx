@@ -63,7 +63,7 @@ const Header = ({ loader }: HeaderProps) => {
             "m-0 p-0 h-6 bg-transparent flex items-center justify-center"
           )}
         >
-          <div className="relative flex items-center">
+          {/* <div className="relative flex items-center">
             <motion.p
               variants={opacity}
               animate={!isActive ? "open" : "closed"}
@@ -73,12 +73,12 @@ const Header = ({ loader }: HeaderProps) => {
             <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>
               Close
             </motion.p>
-          </div>
-          <div
+          </div> */}
+          {/* <div
             className={`${styles.burger} ${
               isActive ? styles.burgerActive : ""
             }`}
-          ></div>
+          ></div> */}
         </Button>
       </div>
       <motion.div

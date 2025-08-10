@@ -20,6 +20,20 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (message.trim().length < 10) {
+    toast({
+      title: "Message too short",
+      description: "Please enter at least 10 characters before sending.",
+      variant: "destructive",
+      className: cn(
+        "top-0 w-full flex justify-center fixed md:max-w-7xl md:top-4 md:right-4"
+      ),
+    });
+    return; // Stop form submission
+  }
+
+
     setLoading(true);
     try {
       const res = await fetch("/api/send", {
@@ -90,7 +104,7 @@ const ContactForm = () => {
       <div className="grid w-full gap-1.5 mb-4">
         <Label htmlFor="content">Your Message</Label>
         <Textarea
-          placeholder="Tell me about about your project,"
+          placeholder="Kyaa hal chaal, sab teek?"
           id="content"
           required
           value={message}

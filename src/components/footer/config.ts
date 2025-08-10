@@ -1,12 +1,12 @@
 const footer: { title: string; href: string }[] = [
   {
-    title: "Blog",
-    href: "https://abhijitzende.hashnode.dev/",
+    title: "Company",
+    href: "https://dsalgo.fun",
   },
-  {
-    title: "Newsletter",
-    href: "https://abhijitzende.hashnode.dev/",
-  },
+  // {
+  //   title: "CP GUY",
+  //   href: "https://leetcode.com/u/visYogesh",
+  // },
 ];
 
 export { footer };

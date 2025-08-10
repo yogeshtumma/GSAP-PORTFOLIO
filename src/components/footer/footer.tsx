@@ -21,6 +21,8 @@ function Footer() {
             <Link
               className="text-xs underline-offset-4 hover:underline"
               href={href}
+              title="I'm Builiding this shit. brick by brick"
+              target="_blanl"
               key={`l_${index}`}
             >
               <Button variant={"link"}>{title}</Button>

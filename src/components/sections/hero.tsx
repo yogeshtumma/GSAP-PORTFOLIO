@@ -72,12 +72,12 @@ const HeroSection = () => {
                 <BlurIn delay={1.2}>
                   <p
                     className={cn(
-                      "md:self-start md:mt-4 font-thin text-md text-slate-500 dark:text-zinc-400 ml-3",
+                      "md:self-start md:mt-4 font-thin text-md text-pink-500 dark:text-zinc-400 ml-3",
                       "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
                     )}
                   >
                     Pookie Developer 
-                  </p>
+                  </p>  
                 </BlurIn>
               </div>
               <div className="mt-8 md:ml-2 flex flex-col gap-3">

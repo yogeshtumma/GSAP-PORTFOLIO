@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo_Black } from "next/font/google";
+import { Inter, Archivo_Black } from "next/font/google";
 import "./globals.css";
 import ElasticCursor from "@/components/ui/ElasticCursor";
 import Particles from "@/components/Particles";
@@ -14,7 +14,6 @@ import EasterEggs from "@/components/easter-eggs";
 import { config } from "@/data/config";
 import SocketContextProvider from "@/contexts/socketio";
 import RemoteCursors from "@/components/realtime/remote-cursors";
-import Analytics from "@/components/Analytics";
 
 export const metadata: Metadata = {
   title: config.title,
@@ -58,35 +57,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={archivoBlack.className}>
-      <body>
-        {/* Analytics route tracking */}
-        <Analytics />
-
-        {/* Umami analytics */}
+    <html lang="en" className={[archivoBlack.className].join(" ")}>
+      <head>
         <Script
           defer
           src={process.env.UMAMI_DOMAIN}
           data-website-id={process.env.UMAMI_SITE_ID}
-        />
-
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-06PTRVNTFS"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-06PTRVNTFS', {
-              page_path: window.location.pathname,
-            });
-          `}
-        </Script>
-
-        {/* Theme and UI */}
+        ></Script>
+        {/* <Analytics /> */}
+      </head>
+      <body>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Archivo_Black } from "next/font/google";
+import { Archivo_Black } from "next/font/google";
 import "./globals.css";
 import ElasticCursor from "@/components/ui/ElasticCursor";
 import Particles from "@/components/Particles";
@@ -58,14 +58,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[archivoBlack.className].join(" ")}>
-      <head>
-        {/* Existing Umami Script */}
+    <html lang="en" className={archivoBlack.className}>
+      <body>
+        {/* Analytics route tracking */}
+        <Analytics />
+
+        {/* Umami analytics */}
         <Script
           defer
           src={process.env.UMAMI_DOMAIN}
           data-website-id={process.env.UMAMI_SITE_ID}
-        ></Script>
+        />
 
         {/* Google Analytics */}
         <Script
@@ -77,14 +80,13 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-06PTRVNTFS');
+            gtag('config', 'G-06PTRVNTFS', {
+              page_path: window.location.pathname,
+            });
           `}
         </Script>
-      </head>
-      <body>
-        {/* Tracks route changes in App Router */}
-        <Analytics />
 
+        {/* Theme and UI */}
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

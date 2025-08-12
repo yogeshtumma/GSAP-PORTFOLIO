@@ -14,6 +14,7 @@ import EasterEggs from "@/components/easter-eggs";
 import { config } from "@/data/config";
 import SocketContextProvider from "@/contexts/socketio";
 import RemoteCursors from "@/components/realtime/remote-cursors";
+import Analytics from "@/components/Analytics";
 
 export const metadata: Metadata = {
   title: config.title,
@@ -59,14 +60,31 @@ export default function RootLayout({
   return (
     <html lang="en" className={[archivoBlack.className].join(" ")}>
       <head>
+        {/* Existing Umami Script */}
         <Script
           defer
           src={process.env.UMAMI_DOMAIN}
           data-website-id={process.env.UMAMI_SITE_ID}
         ></Script>
-        {/* <Analytics /> */}
+
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-06PTRVNTFS"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-06PTRVNTFS');
+          `}
+        </Script>
       </head>
       <body>
+        {/* Tracks route changes in App Router */}
+        <Analytics />
+
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

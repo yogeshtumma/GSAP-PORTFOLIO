@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Archivo_Black } from "next/font/google";
+import { Archivo_Black } from "next/font/google";
 import "./globals.css";
 import ElasticCursor from "@/components/ui/ElasticCursor";
 import Particles from "@/components/Particles";
@@ -14,6 +14,7 @@ import EasterEggs from "@/components/easter-eggs";
 import { config } from "@/data/config";
 import SocketContextProvider from "@/contexts/socketio";
 import RemoteCursors from "@/components/realtime/remote-cursors";
+import Analytics from "@/components/Analytics";
 
 export const metadata: Metadata = {
   title: config.title,
@@ -95,6 +96,7 @@ export default function RootLayout({
               <RemoteCursors />
               <TooltipProvider>
                 <Header />
+                <Analytics /> {/* This tracks SPA page views */}
                 {children}
                 <Footer />
               </TooltipProvider>

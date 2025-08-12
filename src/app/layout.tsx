@@ -59,12 +59,26 @@ export default function RootLayout({
   return (
     <html lang="en" className={[archivoBlack.className].join(" ")}>
       <head>
+        {/* Umami Analytics (if still needed) */}
         <Script
           defer
           src={process.env.UMAMI_DOMAIN}
           data-website-id={process.env.UMAMI_SITE_ID}
-        ></Script>
-        {/* <Analytics /> */}
+        />
+
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-06PTRVNTFS"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-06PTRVNTFS');
+          `}
+        </Script>
       </head>
       <body>
         <ThemeProvider

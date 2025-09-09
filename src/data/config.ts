@@ -42,8 +42,8 @@ const config = {
     linkedin: "https://www.linkedin.com/in/yogeshbabyop/",
     instagram: "https://www.instagram.com/yogesh.babyy/",
     facebook: "https://www.instagram.com/yogesh.babyy/",
-    github: "https://github.com/visYogesh",
-    leetcode:"https://leetcode.com/visYogesh",
+    github: "https://github.com/yogeshtumma",
+    leetcode:"https://leetcode.com/yogeshtumma",
     codeforces:"https://codeforces.com/hackersheela"
   },
 };
